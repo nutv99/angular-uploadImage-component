@@ -10,5 +10,7 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
 
   //url; //Angular 8
-
+  displayCounter(count) {
+    console.log(count);
+}
 }
