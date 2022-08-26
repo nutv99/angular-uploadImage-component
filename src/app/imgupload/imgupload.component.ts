@@ -7,7 +7,8 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 })
 export class ImguploadComponent implements OnInit {
   @Input() myurlcode = '';
-  @Output() ImguploadComponent = new EventEmitter();
+  @Output() 	IAmselectFile = new EventEmitter();
+	// @Output() valueChange = new EventEmitter();
 
   url: any; 
 	msg = "";
@@ -40,6 +41,7 @@ export class ImguploadComponent implements OnInit {
 		reader.onload = (_event) => {
 			this.msg = "";
 			this.url = reader.result; 
+			console.log(reader.result)
 		}
 	}
 
