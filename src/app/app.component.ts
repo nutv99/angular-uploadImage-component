@@ -13,4 +13,8 @@ export class AppComponent  {
   displayCounter(count) {
     console.log(count);
 }
+
+displayCounter22(count) {
+  console.log('Data22',count);
+}
 }
