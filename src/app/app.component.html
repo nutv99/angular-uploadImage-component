@@ -2,11 +2,12 @@
   
   UserName::
   <input type="text" [(ngModel)]="username" formControlName="usernameForm" />
-
+<div style='display:flex'>
   <app-imgupload
     [Caption]="'เลือกไฟล์รูปหลัก'"
     (IAmselectFile)="displayPicture1($event)"
   ></app-imgupload>
+</div>
 
   <app-imgupload
     [Caption]="'เลือกไฟล์รูปประกอป'"
