@@ -1,11 +1,13 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-<app-imgupload (IAmselectFile)='displayCounter($event)'></app-imgupload>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+UserName:: <input type="text" [(ngModel)]="username" formControlName='usernameForm' /> 
+</form>
+<p>Start editing to see some magic happen :)</p>
+<app-imgupload (IAmselectFile)="displayPicture1($event)"></app-imgupload>
 
-<app-imgupload (IAmselectFile)='displayCounter2($event)'></app-imgupload>
+<app-imgupload (IAmselectFile)="displayPicture2($event)"></app-imgupload>
 
-<input type="text" [(ngModel)]="valueC">
+<input type="text" [(ngModel)]="valueC" />
 
-<input type="text" [(ngModel)]="valueD">
+<input type="text" [(ngModel)]="valueD" />
+
+{{ contactForm.value | json }}

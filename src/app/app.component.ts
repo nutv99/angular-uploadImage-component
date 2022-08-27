@@ -1,5 +1,11 @@
 import { Component, VERSION } from '@angular/core';
 import { ImguploadComponent } from './imgupload/imgupload.component';
+import {
+  FormGroup,
+  FormControl,
+  FormBuilder,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -7,17 +13,30 @@ import { ImguploadComponent } from './imgupload/imgupload.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
-  valueC! : any ;
-  valueD! : any ;
-  
-  //url; //Angular 8
-  displayCounter(count:any) {
-    this.valueC = count ;
-    alert(count);
+  username: string;
+  valueC!: any;
+  valueD!: any;
+
+  contactForm!: FormGroup;
+
+  constructor(private fB: FormBuilder) {
+    this.contactForm = this.fB.group({
+      usernameForm: [''],
+      picture1: [''],
+      picture2: [''],
+    });
   }
 
-  displayCounter2(count:any) {
-    this.valueD = count ;
+  //url; //Angular 8
+  displayPicture1(count: any) {
+    this.valueC = count;
+    this.contactForm.get('picture1').setValue(count)
   }
+
+  displayPicture2(count: any) {
+    this.valueD = count;
+    this.contactForm.get('picture2').setValue(count)
+  }
+
+  onSubmit() {}
 }

@@ -36,11 +36,11 @@ export class ImguploadComponent implements OnInit {
     reader.readAsDataURL(event.target.files[0]);
 
     reader.onload = (_event) => {
-      this.msg = '';
+      
       this.url = reader.result;
       this.IAmselectFile.emit(reader.result);
-      this.dataBase64 = reader.result;
-      // console.log(reader.result)
+      
+      
     };
   }
 }
