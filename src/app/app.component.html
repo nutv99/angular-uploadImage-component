@@ -2,8 +2,8 @@
 <p>
   Start editing to see some magic happen :)
 </p>
-<app-imgupload (valueChange)='displayCounter($event)'></app-imgupload>
+<app-imgupload (IAmselectFile)='displayCounter($event)'></app-imgupload>
 
-<app-imgupload (valueChange)='displayCounter22($event)'></app-imgupload>
+<app-imgupload (IAmselectFile)='displayCounter($event)'></app-imgupload>
 
-
+<input type="text" [(ngModel)]="valueC">

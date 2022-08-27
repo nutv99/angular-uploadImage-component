@@ -1,8 +1,11 @@
 <div style="text-align:center">
-	<div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
-	<div><img [src]="url" *ngIf="url" style='width:50px' ></div>
-	<p>
-		<input type="file" (change)="selectFile($event)" accept="image/*">
-	</p>
+  <div [innerHtml]="msg" *ngIf="msg" style="color: red;"></div>
+  <div><img [src]="url" *ngIf="url" style="width:50px" /></div>
+  <p>
+    <input type="file" (change)="selectFile($event)" accept="image/*" />
+  </p>
+  <div style="margin-bottom:35px">
+    <input type="text" [value]="dataBase64" />
+  </div>
 </div>
 <!-- accept="application/pdf" -->
