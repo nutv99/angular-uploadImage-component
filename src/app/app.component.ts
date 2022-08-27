@@ -9,6 +9,7 @@ import { ImguploadComponent } from './imgupload/imgupload.component';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   valueC! : any ;
+  valueD! : any ;
   
   //url; //Angular 8
   displayCounter(count:any) {
@@ -16,7 +17,7 @@ export class AppComponent {
     alert(count);
   }
 
-  displayCounter22(count:any) {
-    alert( count);
+  displayCounter2(count:any) {
+    this.valueD = count ;
   }
 }
