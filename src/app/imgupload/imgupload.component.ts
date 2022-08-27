@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./imgupload.component.css'],
 })
 export class ImguploadComponent implements OnInit {
-  @Input() myurlcode = '';
+  @Input() Caption = '';
   @Output() IAmselectFile = new EventEmitter();
   // @Output() valueChange = new EventEmitter();
   dataBase64: any = '';

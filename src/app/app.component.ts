@@ -28,14 +28,14 @@ export class AppComponent {
   }
 
   //url; //Angular 8
-  displayPicture1(count: any) {
-    this.valueC = count;
-    this.contactForm.get('picture1').setValue(count)
+  displayPicture1(dataImage: any) {
+    this.valueC = dataImage;
+    this.contactForm.get('picture1').setValue(dataImage)
   }
 
-  displayPicture2(count: any) {
-    this.valueD = count;
-    this.contactForm.get('picture2').setValue(count)
+  displayPicture2(dataImage: any) {
+    this.valueD = dataImage;
+    this.contactForm.get('picture2').setValue(dataImage)
   }
 
   onSubmit() {}

@@ -1,13 +1,19 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-UserName:: <input type="text" [(ngModel)]="username" formControlName='usernameForm' /> 
+  UserName::
+  <input type="text" [(ngModel)]="username" formControlName="usernameForm" />
+
+  <app-imgupload
+    [Caption]="'เลือกไฟล์รูปหลัก'"
+    (IAmselectFile)="displayPicture1($event)"
+  ></app-imgupload>
+
+  <app-imgupload
+    [Caption]="'เลือกไฟล์รูปประกอป'"
+    (IAmselectFile)="displayPicture2($event)"
+  ></app-imgupload>
+
+  <!-- <input type="text" [(ngModel)]="valueC" />
+<input type="text" [(ngModel)]="valueD" /> -->
 </form>
-<p>Start editing to see some magic happen :)</p>
-<app-imgupload (IAmselectFile)="displayPicture1($event)"></app-imgupload>
-
-<app-imgupload (IAmselectFile)="displayPicture2($event)"></app-imgupload>
-
-<input type="text" [(ngModel)]="valueC" />
-
-<input type="text" [(ngModel)]="valueD" />
 
 {{ contactForm.value | json }}
